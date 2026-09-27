@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modern Parking System</title><link rel="stylesheet" href="/style.css"></head>
+<body><header><h1>Modern Parking System</h1><p>Parking management dashboard</p></header>
+<main>
+<section class="stats"><div class="card"><span>Total slots</span><strong id="total">10</strong></div><div class="card"><span>Available slots</span><strong id="available">—</strong></div><div class="card"><span>Parked vehicles</span><strong id="parked">—</strong></div></section>
+<section class="card"><h2>Parking layout</h2><div id="slots" class="slots"></div><p class="legend"><span class="dot free"></span> Available <span class="dot busy"></span> Occupied</p></section>
+<div class="columns">
+<section class="card"><h2>Vehicle entry</h2><form id="entryForm"><label>Registration number<input id="entryReg" required maxlength="20" placeholder="e.g. KDA 123A"></label><button>Register vehicle</button></form><p id="entryMsg" class="message"></p></section>
+<section class="card"><h2>Vehicle exit & payment</h2><form id="exitForm"><label>Registration number<input id="exitReg" required maxlength="20" placeholder="e.g. KDA 123A"></label><button>Calculate fee</button></form><div id="receipt" class="receipt"></div><p id="exitMsg" class="message"></p></section>
+</div>
+<section class="card"><h2>Currently parked</h2><div class="tablewrap"><table><thead><tr><th>Registration</th><th>Slot</th><th>Entry time</th></tr></thead><tbody id="vehicles"></tbody></table></div></section>
+</main><footer>Demo application · Entry/exit barriers are simulated on screen.</footer>
+<script src="/app.js"></script></body></html>
